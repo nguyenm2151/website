@@ -539,38 +539,5 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-      $(function() {
-        // Tabs
-        $(".tabgroup > div").hide();
-        $(".tabgroup > div:first-of-type").show();
-        $(".tabs a").click(function(e) {
-          e.preventDefault();
-          var $this = $(this),
-            tabgroup = "#" + $this.parents(".tabs").data("tabgroup"),
-            others = $this
-              .closest("li")
-              .siblings()
-              .children("a"),
-            target = $this.attr("href");
-          others.removeClass("active");
-          $this.addClass("active");
-          $(tabgroup)
-            .children("div")
-            .hide();
-          $(target).show();
-
-          // Scroll to tab content (for mobile)
-          if ($(window).width() < 992) {
-            $("html, body").animate(
-              {
-                scrollTop: $("#first-tab-group").offset().top
-              },
-              200
-            );
-          }
-        });
-      });
-    </script>
   </body>
 </html>
