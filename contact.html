@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Next Level - Contact</title>
-<!--
-Next Level CSS Template
-https://templatemo.com/tm-532-next-level
--->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -20,7 +9,7 @@ https://templatemo.com/tm-532-next-level
         <div class="col-lg-4 col-10">
           <div class="tm-brand-container">
             <div class="tm-brand-texts">
-              <h1 class="text-uppercase tm-brand-name">Next Level</h1>
+              <h1 class="text-uppercase tm-brand-name">Mai Nguyen</h1>
             </div>
           </div>
         </div>
@@ -62,49 +51,71 @@ https://templatemo.com/tm-532-next-level
         </div>
       </div>
 
-      <div class="row tm-welcome-row">
-        <div class="col-12 tm-page-cols-container">
-          <div class="tm-page-col-left tm-welcome-box tm-bg-gradient">
-            <p class="tm-welcome-text">
-              <em
-                >"Gradient CSS BG #A0C0C0 to #669999 and right side is a
-                parallax image of our group."</em
-              >
-            </p>
-          </div>
-          <div class="tm-page-col-right">
-            <div
-              class="tm-welcome-parallax"
-              data-parallax="scroll"
-              data-image-src="img/contact-us.jpg"
-            ></div>
-          </div>
-        </div>
-      </div>
 
       <section class="row tm-pt-4 tm-mb-3">
         <div class="col-12 tm-page-cols-container">
           <div class="tm-page-col-left">
             <div class="tm-contact-container tm-mb-6">
               <div class="tm-address-container">
-                <h2 class="tm-text-secondary tm-mb-6">Address</h2>
-                <address>
-                  <p>
-                    110-330 Sed ultricies purus nec<br />
-                    Suscipit vulputate<br />
-                    Fusce a massa 10550
-                  </p>
-                </address>
+                <h2 class="tm-text-secondary tm-mb-6">Contact Me</h2>
+                    <a style="color:rgb(31, 104, 104);"
+                      href="https://github.com/nguyenm2151"
+                      target="_blank"
+                    >
+                      <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a style="color:rgb(31, 104, 104);padding-left:10px;"
+                      href="mailto:nguyenma@mit.edu"
+                    >
+                      <i class="far fa-envelope fa-2x"></i>
+                    </a>
+                    <a style="color:rgb(31, 104, 104);padding-left:10px;"
+                      href="https://www.linkedin.com/in/mai-nguyen1511/"
+                      target="_blank"
+                    >
+                      <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
               </div>
 
               <div class="tm-location-container">
                 <h2 class="tm-text-secondary tm-mb-4">Location</h2>
-                <a href="#"><img src="img/map.png" alt="Map image" class="img-fluid" /></a>
+
+                <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAU2H978xnttDu-62mj5MAGCGNMfcKcVFk&callback=initMap&libraries=&v=weekly"
+                defer
+              ></script>
+              <style>
+                /* Set the size of the div element that contains the map */
+                #map {
+                  height: 260px;
+                  /* The height is 400 pixels */
+                  width: 300px;
+                  /* The width is the width of the web page */
+                }
+              </style>
+              <script>
+                // Initialize and add the map
+                function initMap() {
+                  // The location of Uluru
+                  const uluru = { lat: 42.360420, lng: -71.088100 };
+                  // The map, centered at Uluru
+                  const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 12,
+                    center: uluru,
+                  });
+                  // The marker, positioned at Uluru
+                  const marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map,
+                  });
+                }
+              </script>
+              <div id="map"></div>
               </div>
             </div>
           </div>
           <div class="tm-page-col-right tm-form-container">
-            <h2 class="tm-text-secondary mb-4">Contact Us</h2>
+            <h2 class="tm-text-secondary mb-4">Leave a Message</h2>
             <form
               action="contact.html"
               method="POST"
@@ -128,38 +139,11 @@ https://templatemo.com/tm-532-next-level
                   placeholder="Your Email"
                   required="" />
               </div>
-              <div class="form-group-2 input-field">
-                <select class="tm-select" name="occupation" id="occupation">
-                  <option value="select">Your Occupation</option>
-                  <option value="CE">Chief Executive</option>
-                  <option value="SA">Software Architect</option>
-                  <option value="PM">Project Manager</option>
-                  <option value="WD">Web Developer</option>
-                </select>
-              </div>
-              <div class="form-group tm-choices-container tm-text-secondary">
-                <label class="tm-w-50">
-                  <input
-                    type="radio"
-                    class="with-gap"
-                    name="gender"
-                    value="male" />
-                  <span>Male</span>
-                </label>
 
-                <label class="tm-w-50">
-                  <input
-                    type="radio"
-                    class="with-gap"
-                    name="gender"
-                    value="female" />
-                  <span>Female</span>
-                </label>
-              </div>
 
               <div class="tm-mb-5">
                 <textarea
-                  rows="10"
+                  rows="5"
                   id="contact_message"
                   name="contact_message"
                   class="form-control rounded-0"
@@ -167,45 +151,12 @@ https://templatemo.com/tm-532-next-level
                   required=""></textarea>
               </div>
 
-              <div class="tm-mb-4 tm-choices-container tm-text-secondary">
-                <label class="tm-w-50">
-                  <input
-                    type="checkbox"
-                    name="ckb[]"
-                    class="filled-in"
-                    value="1" />
-                  <span>Check Box 1</span>
-                </label>
-                <label class="tm-w-50">
-                  <input
-                    type="checkbox"
-                    name="ckb[]"
-                    class="filled-in"
-                    value="2" />
-                  <span>Check Box 2</span>
-                </label>
-              </div>
-              <div class="tm-mb-6 file-upload-container">
-                <input
-                  id="file_name_label"
-                  type="text"
-                  class="border-top-0 border-right-0 border-left-0"
-                  placeholder="Your file to upload"
-                  disabled />
-                <label class="btn btn-outline btn-file">
-                  Browse...
-                  <input
-                    type="file"
-                    name="file_to_upload"
-                    style="display: none;" />
-                </label>
-              </div>
 
               <div class="">
                 <button
                   type="submit"
                   class="btn btn-secondary tm-btn-submit rounded-0">
-                  Submit
+                  Send
                 </button>
               </div>
             </form>
@@ -213,43 +164,6 @@ https://templatemo.com/tm-532-next-level
         </div>
       </section>
 
-      <!-- Call to Action -->
-      <section class="row" id="tmCallToAction">
-        <div class="col-12 tm-page-cols-container tm-call-to-action-col">
-          <div class="tm-page-col-right">
-            <div class="tm-call-to-action-box">
-              <i class="fas fa-3x fa-rss-square tm-call-to-action-icon"></i>
-              <div class="tm-call-to-action-text">
-                <h3 class="tm-call-to-action-title">
-                  Vivamus sollicitudin tellus
-                </h3>
-                <p class="tm-call-to-action-description">
-                  Maecenas maximus tellus in dolor auctor tristique. Nam
-                  hendrerit posuere laoreet. Aliquam erat volutpat. Nulla eros
-                  est, imperdiet vel feugiat non, ullamcorper mattis nulla.
-                </p>
-                <form action="#" method="GET" class="tm-call-to-action-form">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    class="tm-email-input"
-                    required />
-                  <button type="submit" class="btn btn-primary">
-                    Subscribe
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Page footer -->
-      <footer class="row tm-page-footer">
-        <p class="col-12 tm-copyright-text mb-0">
-          Copyright &copy; 2019 Next Level Company... Designed by Template Mo
-        </p>
-      </footer>
     </div>
 
     <script src="js/jquery.min.js"></script>
